@@ -1,0 +1,43 @@
+name: Publish
+on:
+    workflow_run:
+        workflows: ["CI"]
+        branches:
+            - main
+        types:
+            - completed
+jobs:
+    npm-publish:
+        name: npm-publish
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+            - id: check
+              uses: EndBug/version-check@1d7d917a07973cd80343b97a30ab1feca68dd4c6
+              with:
+                  static-checking: remoteIsNew
+                  file-url: https://unpkg.com/typedoc-plugin-definitely-typed-links/package.json
+            - name: Set up Node
+              if: steps.check.outputs.changed == 'true'
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+            - name: Install
+              if: steps.check.outputs.changed == 'true'
+              run: npm install
+            - name: Build
+              if: steps.check.outputs.changed == 'true'
+              run: npm run build
+            - name: Setup publish token
+              if: steps.check.outputs.changed == 'true'
+              run: echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" > .npmrc
+              env:
+                  NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+            - name: Publish
+              if: steps.check.outputs.changed == 'true'
+              run: |
+                  npm publish --non-interactive
+                  git tag v$(jq .version package.json -r)
+                  git push --tags
