@@ -7,7 +7,7 @@ mkdir -p tmp
 
 if [ -d tmp/DefinitelyTyped ]; then
     # Avoid re-cloning if we already have a repo
-    git -C tmp/DefinitelyTyped fetch
+    git -C tmp/DefinitelyTyped fetch origin master:master
 else
     git clone git@github.com:DefinitelyTyped/DefinitelyTyped.git --bare tmp/DefinitelyTyped
 fi
