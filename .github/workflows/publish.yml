@@ -17,7 +17,8 @@ jobs:
             - id: check
               uses: EndBug/version-check@v2
               with:
-                  static-checking: remoteIsNew
+                  diff-search: true
+                  static-checking: localIsNew
                   file-url: https://unpkg.com/typedoc-plugin-dt-links/package.json
             - name: Set up Node
               if: steps.check.outputs.changed == 'true'
