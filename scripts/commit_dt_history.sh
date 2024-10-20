@@ -27,7 +27,7 @@ extra=$"\
 
     git add CHANGELOG.md ./package.json ./package-lock.json ./data/dt_history.txt
     git commit -m "[github-actions] Update DT Commits";
-    # git push
+    git push
 else
     echo "No updates to DefinitelyTyped"
 fi

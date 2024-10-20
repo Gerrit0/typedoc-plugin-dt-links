@@ -20,6 +20,8 @@ jobs:
                   repository: DefinitelyTyped/DefinitelyTyped
                   path: tmp/DefinitelyTyped
                   fetch-depth: 0
+                  # We don't actually need anything but the commit history
+                  sparse-checkout: README.md
 
             - name: Cache DefinitelyTyped
               id: cache-dt
