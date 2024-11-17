@@ -23,13 +23,6 @@ jobs:
                   # We don't actually need anything but the commit history
                   sparse-checkout: README.md
 
-            - name: Cache DefinitelyTyped
-              id: cache-dt
-              uses: actions/cache@v4
-              with:
-                  path: tmp/DefinitelyTyped
-                  key: ${{ runner.os }}-dt
-
             - name: Update DT Commits
               run: ./scripts/update_dt_history.sh
 
