@@ -14,4 +14,4 @@ if [ -z "$CI" ]; then
     fi
 fi
 
-git -C tmp/DefinitelyTyped log --pretty=format:"%h %cd" --date=unix > data/dt_history.txt
+git -C tmp/DefinitelyTyped log --pretty=format:"%H %cd" --date=unix > data/dt_history.txt

@@ -33,27 +33,36 @@ describe("findDtCommitHash", () => {
 
     test("Exactly matching a commit time", () => {
         const hash = findDtCommitHash(1727892072);
-        equal(hash, "c1b76e12ba9");
+        equal(hash, "c1b76e12ba94c0faaf6eca5d65292be845840d02");
     });
 
     test("Slightly before a commit time", () => {
         const hash = findDtCommitHash(1727892072 - 1);
-        equal(hash, "26a3701341c");
+        equal(hash, "26a3701341c4edfa8e2aa60f71f065dc457f4442");
     });
 
     test("Slightly after a commit time", () => {
         const hash = findDtCommitHash(1727892072 + 1);
-        equal(hash, "c1b76e12ba9");
+        equal(hash, "c1b76e12ba94c0faaf6eca5d65292be845840d02");
     });
 
     test("Last commit hash", () => {
-        equal(findDtCommitHash(0), "647369a322b");
-        equal(findDtCommitHash(1349455186 + 1), "647369a322b");
-        equal(findDtCommitHash(1349455186 - 1), "647369a322b");
+        equal(findDtCommitHash(0), "647369a322be470d84f8d226e297267a7d1a0796");
+        equal(
+            findDtCommitHash(1349455186 + 1),
+            "647369a322be470d84f8d226e297267a7d1a0796",
+        );
+        equal(
+            findDtCommitHash(1349455186 - 1),
+            "647369a322be470d84f8d226e297267a7d1a0796",
+        );
     });
 
     test("@types/node v22.7.4", () => {
-        equal(findDtCommitHash(1727453312), "4b49cac4991");
+        equal(
+            findDtCommitHash(1727453312),
+            "4b49cac49912d6036a706ab6675c6c93751de00c",
+        );
     });
 });
 
@@ -115,7 +124,7 @@ describe("plugin", () => {
         ).map((part) => ({ target: part.target, text: part.text }));
 
         const eventLink = (line: number) =>
-            "https://github.com/DefinitelyTyped/DefinitelyTyped/blob/4b49cac4991/types/node/events.d.ts#L" +
+            "https://github.com/DefinitelyTyped/DefinitelyTyped/blob/4b49cac49912d6036a706ab6675c6c93751de00c/types/node/events.d.ts#L" +
             line;
 
         equal(tags, [
@@ -124,11 +133,11 @@ describe("plugin", () => {
                 text: "EventEmitter",
             },
             {
-                target: eventLink(359),
+                target: eventLink(387),
                 text: "EventEmitter.getMaxListeners",
             },
             {
-                target: eventLink(769),
+                target: eventLink(774),
                 text: "EventEmitter#getMaxListeners",
             },
         ]);

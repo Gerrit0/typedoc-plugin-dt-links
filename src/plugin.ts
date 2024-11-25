@@ -268,7 +268,7 @@ export function load(app: Application) {
             packageName,
             innerPath,
             "#L",
-            getLineNumber(symbolId) + 1,
+            getLineNumber(symbolId),
         ].join("");
     }
 }

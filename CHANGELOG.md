@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1.0 (2024-11-24)
+
+-   Support TypeDoc 0.27
+-   Plugin will now produce links with the full git hash to avoid links breaking as the DT repo grows
+
 ## v1.0.4 (2024-11-24)
 
 -   Updated to produce stable links to DefinitelyTyped for packages published before 2024-11-24
