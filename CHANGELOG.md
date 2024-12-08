@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.2 (2024-12-08)
+
+-   Updated to produce stable links to DefinitelyTyped for packages published before 2024-12-08
+
 ## v1.1.1 (2024-12-01)
 
 -   Updated to produce stable links to DefinitelyTyped for packages published before 2024-12-01
