@@ -33,5 +33,11 @@
 	},
 	"bugs": {
 		"url": "https://github.com/Gerrit0/typedoc-plugin-dt-links/issues"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"dprint",
+			"esbuild"
+		]
 	}
 }
