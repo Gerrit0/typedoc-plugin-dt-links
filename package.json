@@ -1,39 +1,37 @@
 {
-  "name": "typedoc-plugin-dt-links",
-  "version": "1.1.16",
-  "main": "dist/plugin.js",
-  "type": "module",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "22.7.4",
-    "@voxpelli/node-test-pretty-reporter": "^1.1.2",
-    "faucet": "^0.0.4",
-    "prettier": "^3.3.3",
-    "tap-prettify": "^0.0.2",
-    "tsx": "^4.19.2",
-    "typedoc": "^0.27.0-beta.1",
-    "typescript": "^5.7.2"
-  },
-  "keywords": [
-    "typedoc-plugin"
-  ],
-  "files": [
-    "dist/plugin.js",
-    "data/dt_history.txt"
-  ],
-  "peerDependencies": {
-    "typedoc": ">= 0.23.14 || 0.24.x || 0.25.x || 0.26.x || 0.27.x"
-  },
-  "scripts": {
-    "lint": "prettier --check .",
-    "build": "tsc",
-    "test": "tsx --test --test-reporter=@voxpelli/node-test-pretty-reporter src/test/plugin.test.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Gerrit0/typedoc-plugin-dt-links.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Gerrit0/typedoc-plugin-dt-links/issues"
-  }
+	"name": "typedoc-plugin-dt-links",
+	"version": "2.0.0",
+	"main": "dist/plugin.js",
+	"type": "module",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "22.7.4",
+		"@voxpelli/node-test-pretty-reporter": "^1.1.2",
+		"dprint": "^0.49.0",
+		"tsx": "^4.19.3",
+		"typedoc": "^0.28.0",
+		"typescript": "^5.8.2"
+	},
+	"keywords": [
+		"typedoc-plugin"
+	],
+	"files": [
+		"dist/plugin.js",
+		"data/dt_history.txt"
+	],
+	"peerDependencies": {
+		"typedoc": "0.28.x"
+	},
+	"scripts": {
+		"lint": "dprint check",
+		"build": "tsc",
+		"test": "tsx --test --test-reporter=@voxpelli/node-test-pretty-reporter src/test/plugin.test.ts"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Gerrit0/typedoc-plugin-dt-links.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Gerrit0/typedoc-plugin-dt-links/issues"
+	}
 }

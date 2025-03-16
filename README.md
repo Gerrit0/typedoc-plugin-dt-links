@@ -8,22 +8,17 @@ to their source code on GitHub.
 If VSCode can follow a link into an `@types` package, this plugin should also
 be able to provide links to that package.
 
-> Note: Using TypeDoc before 0.26.8 may result in links which go to the start of
-> the doc comment rather to the symbol name.
-
-Supports TypeDoc 0.23.14 through 0.26.x.
-
 ## Options
 
--   `warnOnUnstableDtLink`
+- `warnOnUnstableDtLink`
 
-    Defaults to `true`. If set, and an `@types` package is referenced which is newer
-    than this plugin, produces a warning as this plugin won't be able to produce a stable
-    link.
+  Defaults to `true`. If set, and an `@types` package is referenced which is newer
+  than this plugin, produces a warning as this plugin won't be able to produce a stable
+  link.
 
-    This plugin is automatically published weekly, so if you are upgrading `@types` packages
-    and rebuilding docs more frequently than that, you may want to disable this option as
-    the link won't be dead long enough to matter.
+  This plugin is automatically published weekly, so if you are upgrading `@types` packages
+  and rebuilding docs more frequently than that, you may want to disable this option as
+  the link won't be dead long enough to matter.
 
 ## Changelog
 
@@ -50,4 +45,4 @@ was released more recently than this plugin, the plugin can't know what git hash
 should be used and will instead use `master` as the reference.
 
 [useTsLinkResolution]: https://typedoc.org/options/comments/#usetslinkresolution
-[ReflectionSymbolId]: (https://typedoc.org/api/classes/Models.ReflectionSymbolId.html)
+[ReflectionSymbolId]: https://typedoc.org/api/classes/Models.ReflectionSymbolId.html

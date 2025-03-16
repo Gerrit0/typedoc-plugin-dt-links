@@ -1,14 +1,14 @@
 {
-    "compilerOptions": {
-        "target": "es2022",
-        "module": "Node16",
-        "rootDir": "src",
-        "strict": true,
-        "isolatedModules": true,
-        "esModuleInterop": true,
-        "outDir": "dist",
-        "types": ["node"],
-        "skipLibCheck": true
-    },
-    "include": ["."]
+	"compilerOptions": {
+		"target": "es2022",
+		"module": "Node16",
+		"rootDir": "src",
+		"strict": true,
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"outDir": "dist",
+		"types": ["node"],
+		"skipLibCheck": true
+	},
+	"include": ["."]
 }
