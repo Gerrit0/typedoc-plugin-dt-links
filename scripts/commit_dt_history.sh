@@ -10,7 +10,7 @@ extra=$"\
 \n\
 ## $version ($(date '+%Y-%m-%d'))\n\
 \n\
--   Updated to produce stable links to DefinitelyTyped for packages published before $(date '+%Y-%m-%d')\n\
+- Updated to produce stable links to DefinitelyTyped for packages published before $(date '+%Y-%m-%d')\n\
 "
 
     awk $"
