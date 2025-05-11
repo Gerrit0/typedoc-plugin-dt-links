@@ -25,7 +25,7 @@ extra=$"\
     " CHANGELOG.md > CHANGELOG2.md
     mv CHANGELOG2.md CHANGELOG.md
 
-    git add CHANGELOG.md ./package.json ./package-lock.json ./data/dt_history.txt
+    git add CHANGELOG.md ./package.json ./pnpm-lock.json ./data/dt_history.txt
     git commit -m "[github-actions] Update DT Commits";
     git push
 else
