@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.1 (2025-05-11)
+
+-   Updated to produce stable links to DefinitelyTyped for packages published before 2025-05-11
+
 ## v2.0.0 (2025-03-16)
 
 - Update to support TypeDoc 0.28, drop support for TypeDoc before 0.28
