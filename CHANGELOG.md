@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.39 (2026-01-25)
+
+- Updated to produce stable links to DefinitelyTyped for packages published before 2026-01-25
+
 ## v2.0.38 (2026-01-18)
 
 - Updated to produce stable links to DefinitelyTyped for packages published before 2026-01-18
