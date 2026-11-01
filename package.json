@@ -1,6 +1,6 @@
 {
 	"name": "typedoc-plugin-dt-links",
-	"version": "2.0.78",
+	"version": "2.0.79",
 	"main": "dist/plugin.js",
 	"type": "module",
 	"license": "MIT",
